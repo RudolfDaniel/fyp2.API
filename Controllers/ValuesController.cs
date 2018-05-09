@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using fyp2.API.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace fyp2.API.Controllers
 {
+  [Authorize]
   [Route("api/[controller]")]
   public class ValuesController : Controller
   {
@@ -16,7 +18,7 @@ namespace fyp2.API.Controllers
     {
       _context = context;
     }
-
+    
     // GET api/values
     [HttpGet]
     public async Task<IActionResult> GetValues()
