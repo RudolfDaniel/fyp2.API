@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using fyp2.API.Data;
 using fyp2.API.Dtos;
 using fyp2.API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
