@@ -60,7 +60,7 @@ namespace fyp2.API.Controllers
 
       _mapper.Map(userforUpdateDto, userFromRepo);
 
-      if (await _repo.SaveAll());
+      if (await _repo.SaveAll())
         return NoContent();
 
       throw new Exception($"Updating user {id} failed on save");
